@@ -97,20 +97,7 @@ print(f"Desvio Padrão: {desvio_padrao:.2f}")
 variancia = df['quantity'].var()
 print(f"Variância: {variancia:.2f}")
 
-# # Teste de Normalidade (Shapiro-Wilk)
-# if len(col_data) > 2 and len(col_data) <= 5000: # Shapiro-Wilk é bom para n <= 5000
-#     try:
-#         stat_shapiro, p_valor_shapiro = stats.shapiro(col_data)
-#         print(f"Teste de Normalidade (Shapiro-Wilk): Estatística={stat_shapiro:.3f}, p-valor={p_valor_shapiro:.3f}")
-#         if p_valor_shapiro > 0.05:
-#             print("  -> Sugestão (Shapiro-Wilk): Os dados PARECEM ser normalmente distribuídos (não rejeitar H0).")
-#         else:
-#             print("  -> Sugestão (Shapiro-Wilk): Os dados NÃO PARECEM ser normalmente distribuídos (rejeitar H0).")
-#     except Exception as e_shapiro:
-#             print(f"Erro no teste de Shapiro-Wilk para {col}: {e_shapiro}")
-
-# elif len(col_data) > 5000:
-#     # Para N > 5000, Kolmogorov-Smirnov com correção de Lilliefors (usando statsmodels) é uma alternativa
+# The commented-out code for Shapiro-Wilk and Kolmogorov-Smirnov tests has been removed to improve readability and maintainability.
 #     try:
 #         ks_stat, ks_p_value = stats.kstest(col_data, 'norm', args=(col_data.mean(), col_data.std()), N=len(col_data))
 #         print(f"Teste de Normalidade (Kolmogorov-Smirnov): Estatística={ks_stat:.3f}, p-valor={ks_p_value:.3f}")
